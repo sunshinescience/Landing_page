@@ -51,9 +51,9 @@
 // Build menu 
 
 // Scroll to section on link click
-function sectionScroll() {
-    var elmnt = document.getElementById("section2");
-    return elmnt.scrollIntoView();
+function sectionScroll(sectionNumber) {
+    var elmnt = document.getElementById(sectionNumber);
+    return elmnt.scrollIntoView({behavior: "smooth"});
 }
 
 // Set sections as active
