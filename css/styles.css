@@ -75,12 +75,28 @@ section {
 }
 
 #navbar__list{
-    display: inline; 
-    padding: 1em;
-    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    /* background-color: rgba(0,13,60,1); */
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
     text-decoration: none;
-    color: #000;
-    margin: 0 auto;
+}
+  
+li a:hover {
+    background-color: #333333;
 }
 
 .navbar__menu .menu__link {
