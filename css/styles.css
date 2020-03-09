@@ -11,7 +11,7 @@
 
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
+    background: rgb(136,203,171); 
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
@@ -28,15 +28,15 @@ h1 {
 
 @media only screen and (min-width: 35em){
     h1 {
-        font-size: 7em;
+        font-size: 3em;
         margin: 2em 4rem 1em;
     }
 }
 
 h2 {
-    border-bottom: 1px solid #cc1;
+    border-bottom: 1px solid gold;
     font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #fff;
 }
 
@@ -74,6 +74,15 @@ section {
     display: inline-block;
 }
 
+#navbar__list{
+    display: inline; 
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin: 0 auto;
+}
+
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
@@ -84,13 +93,13 @@ section {
 
 .navbar__menu .menu__link:hover {
     background: #333;
-    color: #fff;
+    /* color: #fff; */
     transition: ease 0.3s all;
 }
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    background: white;
     position: fixed;
     top: 0;
     width: 100%;
@@ -99,7 +108,7 @@ section {
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
+    background: rgba(0,13,60,1);
     padding: 3em;
     color: #fff;
 }
