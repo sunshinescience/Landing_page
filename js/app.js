@@ -49,6 +49,7 @@
 */
 
 // Build menu 
+/* Can you listen for an event in the aspect that if a section is written in HTML, then you add it to the nav menu? */
 
 // Scroll to section on link click
 function sectionScroll(sectionNumber) {
@@ -57,5 +58,14 @@ function sectionScroll(sectionNumber) {
 }
 
 // Set sections as active
+/* Step 1: Get element's position in relation to top of the viewport 
 
+Or, instead, perhaps use:  
+Execute a JavaScript when a <div> element is being scrolled:
+<div onscroll="myFunction()"> 
+
+Better yet, listen to a scroll event, so use: object.addEventListener("scroll", myScript);
+
+And if a certain section is scrolled to, then highlight it!
+*/
 
