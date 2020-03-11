@@ -49,7 +49,22 @@
 */
 
 // Build menu 
-/* Can you listen for an event in the aspect that if a section is written in HTML, then you add it to the nav menu? */
+/* First make ul using createElement 
+than apply the <a> on the list items you'll be creating for that ul
+and appending the <li> using appendChild */
+document.body.onload = addElement;
+
+function addElement(){
+    let li = document.createElement('li');
+    //create array with the sections in it
+    const sectionNumber = document.getElementsByClassName('landing__container');
+    for (let i=0; i<sectionNumber.length; i++) {
+        //create a new ul element
+        let newElementA = document.createElement('a');
+    }
+    
+
+}
 
 // Scroll to section on link click
 function sectionScroll(sectionNumber) {
