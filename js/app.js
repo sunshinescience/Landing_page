@@ -55,12 +55,16 @@ and appending the <li> using appendChild */
 document.body.onload = addElement;
 
 function addElement(){
-    let li = document.createElement('li');
     //create array with the sections in it
     const sectionNumber = document.getElementsByClassName('landing__container');
     for (let i=0; i<sectionNumber.length; i++) {
-        //create a new ul element
+        //create a new li element
+        let listLi = document.createElement('li');
+        //create a new a element
         let newElementA = document.createElement('a');
+        //create a variable to append an item in a list
+        let liA = listLi.appendChild(newElementA);
+        document.getElementById("navbar__list").innerHTML = "Section!";
     }
     
 
