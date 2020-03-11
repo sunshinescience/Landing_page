@@ -60,14 +60,24 @@ function addElement(){
     for (let i=0; i<sectionNumber.length; i++) {
         //create a new li element
         let listLi = document.createElement('li');
-        //create a new a element
-        let newElementA = document.createElement('a');
-        //create a variable to append an item in a list
-        let liA = listLi.appendChild(newElementA);
-        document.getElementById("navbar__list").innerHTML = "Section!";
-    }
-    
+        //create a new a tag
+        let newA = document.createElement('a');
+        //create a variable to append an <a> to a list
+        let liA = listLi.appendChild(newA);
+        // Add 1 to the section, to build the correct section number in the nav menu
+        let j = i + 1
+        // make the text for the nav menu section(s) 
+        let linkText = document.createTextNode("section" + j);
+        // append text to list
+        let newElement = liA.appendChild(linkText);
 
+        let secName = document.getElementById("navbar__list");
+        // add the newly created element and its content into the DOM   
+        secName.appendChild(newElement);
+
+        //create an onclick
+        //liA.onclick = "sectionScroll('section1')";
+    }
 }
 
 // Scroll to section on link click
