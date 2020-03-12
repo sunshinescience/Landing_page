@@ -77,26 +77,21 @@ section {
 #navbar__list{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     overflow: hidden;
     background-color: black;
     /* background-color: rgba(0,13,60,1); */
-}
-  
-li {
-    float: left; /* Lines the list items horizontally */
-}
-  
-li a {
     display: block;
     color: white;
-    text-align: center;
-    padding: 16px;
+    /* center nav menu: */
+    /* text-align: center; */ 
     text-decoration: none;
 }
-  
-li a:hover {
-    background-color: #333333;
+
+.menu__link {
+    font-weight: bold;
 }
 
 .navbar__menu .menu__link {
@@ -108,7 +103,7 @@ li a:hover {
 }
 
 .navbar__menu .menu__link:hover {
-    background: #333;
+    background-color: #333333;
     /* color: #fff; */
     transition: ease 0.3s all;
 }

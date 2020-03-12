@@ -67,22 +67,30 @@ function addElement(){
         // Add 1 to the section, to build the correct section number in the nav menu
         let j = i + 1
         // make the text for the nav menu section(s) 
-        let linkText = document.createTextNode("section" + j);
+        let linkText = document.createTextNode("section" + j + " ");
         // append text to list
         let newElement = liA.appendChild(linkText);
-
+        // Make a variable with the specific element in the HTML to populate the list with
         let secName = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
         secName.appendChild(newElement);
-
-        //create an onclick
-        //liA.onclick = "sectionScroll('section1')";
+        secName.classList.add("menu__link"); 
+        /* secName.href = "#" + linkText; */
     }
 }
 
+// Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
+
+//secName.onclick = sectionScroll(linkText); 
+
+        
+/* secName.addEventListener("click", sectionScroll(linkText)); */
+//create an onclick
+//liA.onclick = "sectionScroll('section1')";
+
 // Scroll to section on link click
-function sectionScroll(sectionNumber) {
-    var elmnt = document.getElementById(sectionNumber);
+function sectionScroll(tagName, sectionNumber) {
+    var elmnt = document.getElementsByTagName(tagName).getElementById(sectionNumber);
     return elmnt.scrollIntoView({behavior: "smooth"});
 }
 
