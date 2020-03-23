@@ -48,36 +48,46 @@
  * 
 */
 
+//create array with the sections in it
+const sectionNumber = document.getElementsByClassName('landing__container');
 // Build menu 
 /* First make ul using createElement 
 than apply the <a> on the list items you'll be creating for that ul
 and appending the <li> using appendChild */
 document.body.onload = addElement;
 
-function addElement(){
-    //create array with the sections in it
-    const sectionNumber = document.getElementsByClassName('landing__container');
+function addElement(){  
     for (let i=0; i<sectionNumber.length; i++) {
         //create a new li element
         let listLi = document.createElement('li');
         //create a new a tag
-        let newA = document.createElement('a');
+        let a = document.createElement('a');
         //create a variable to append an <a> to a list
-        let liA = listLi.appendChild(newA);
+        let liA = listLi.appendChild(a);
+        
+        // Make the 'section' number
         // Add 1 to the section, to build the correct section number in the nav menu
         let j = i + 1
         // make the text for the nav menu section(s) 
         let linkText = document.createTextNode("section" + j + " ");
         // append text to list
         let newElement = liA.appendChild(linkText);
-        // Make a variable with the specific element in the HTML to populate the list with
+
+        // Add in an href within the <a> tag, that has the '#' concatinated to the section number 
+        a.setAttribute("href", ("#" + linkText));
+
+        // Make a variable with the specific element in the HTML - to populate the list with
         let secName = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
         secName.appendChild(newElement);
-        secName.classList.add("menu__link"); 
+        // add a class called menu__link to the element
+        secName.classList.add("menu__link");     
+        // Adding an href to try to make it a link
         /* secName.href = "#" + linkText; */
     }
 }
+
+
 
 // Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
 

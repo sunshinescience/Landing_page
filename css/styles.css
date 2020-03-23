@@ -90,6 +90,8 @@ section {
     text-decoration: none;
 }
 
+
+/* Thought to add in a menu__link to go with the two things below this */
 .menu__link {
     font-weight: bold;
 }
