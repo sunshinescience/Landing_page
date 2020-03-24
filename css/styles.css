@@ -97,10 +97,6 @@ section {
     font-weight: bold;
 }
 
-.clicked{
-    background: red;
-    }
-
 .navbar__menu .menu__link {
     display: block;
     padding: 1em;
