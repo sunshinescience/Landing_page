@@ -81,7 +81,8 @@ section {
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: hidden;
-    background-color: black;
+    /* background-color: black; */
+    background-color: tan;
     /* background-color: rgba(0,13,60,1); */
     display: block;
     color: white;
@@ -95,6 +96,10 @@ section {
 .menu__link {
     font-weight: bold;
 }
+
+.clicked{
+    background: red;
+    }
 
 .navbar__menu .menu__link {
     display: block;

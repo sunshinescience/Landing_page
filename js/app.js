@@ -72,7 +72,6 @@ function addElement(){
         let linkText = document.createTextNode("section" + j + " ");
         // append text to list
         let newElement = liA.appendChild(linkText);
-
         // Add in an href within the <a> tag, that has the '#' concatinated to the section number 
         a.setAttribute("href", ("#" + linkText));
 
@@ -84,7 +83,33 @@ function addElement(){
         secName.classList.add("menu__link");     
         // Adding an href to try to make it a link
         /* secName.href = "#" + linkText; */
+        secName.classList.add("clicked"); 
     }
+}
+
+function showclic(event){ 
+    //get the element that is clicked
+    var ele = event.target;
+    
+    //add the class using the increment operator
+    ele.className += " clicked";
+  }
+
+function attachClickEvent(){
+  
+    // get all the elements with className 'menu__link'. It returns an array
+    var menuList = document.getElementsByClassName('clicked');
+  
+    // get the length of array defined above
+    var listLength = menuList.length;
+    var i=0;
+  
+    // run the for loop for each element in the array
+    for(;i<listLength;i++){
+      
+        // attach the event listener
+        menuList[i].addEventListener("click", showclic);
+    }                                                                             
 }
 
 
