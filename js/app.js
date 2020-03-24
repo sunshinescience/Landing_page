@@ -86,9 +86,19 @@ function addElement(){
     }  
 }
 
+// Add in an onclick attribute within each new element created in the function 
+function attachClickEvent(){
+    // Get all of the elements with className 'menu__link'. It returns an array
+    let sectionList = document.getElementsByClassName('menu__link');
+    
+    // Get the length of the above array
+    let listLength = sectionList.length;
+    let i = 0;
 
-// Add in an onclick attribute within the <a> tag, that has the section number 
-a.addEventListener("click", sectionScroll(sectionNumber));
+    for (i=0;i<listLength;i++){
+        sectionList[i].addEventListener("click", sectionScroll(sectionNumber));
+    }   
+}
 
 // Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
 
@@ -104,6 +114,7 @@ function sectionScroll(sectionNumber) {
     var elmnt = document.getElementById(sectionNumber);
     return elmnt.scrollIntoView({behavior: "smooth"});
 }
+
 
 // Set sections as active
 /* Step 1: Get element's position in relation to top of the viewport 
