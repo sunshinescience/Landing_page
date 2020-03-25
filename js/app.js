@@ -78,15 +78,15 @@ function addElement(){
         a.setAttribute("href", ("#" + linkText));
 
         // Make a variable with the specific element in the HTML - to populate the list with
-        let secName = document.getElementById("navbar__list");
+        let menuElement = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
-        secName.appendChild(newElement);
+        menuElement.appendChild(newElement);
         // add a class called menu__link to the element
-        secName.classList.add("menu__link");  
+        menuElement.classList.add("menu__link");  
     }  
 }
 
-// Add in an onclick attribute within each new element created in the function 
+// Add in an onclick attribute within each new <a> tag created in the addElement function above 
 function attachClickEvent(){
     // Get all of the elements with className 'menu__link'. It returns an array
     let sectionList = document.getElementsByClassName('menu__link');
@@ -102,10 +102,10 @@ function attachClickEvent(){
 
 // Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
 
-//secName.onclick = sectionScroll(linkText); 
+//menuElement.onclick = sectionScroll(linkText); 
 // document.getElementById("newId").addEventListener("click", sectionScroll(tagName, sectionNumber));
         
-/* secName.addEventListener("click", sectionScroll(linkText)); */
+/* menuElement.addEventListener("click", sectionScroll(linkText)); */
 //create an onclick
 //liA.onclick = "sectionScroll('section1')";
 
