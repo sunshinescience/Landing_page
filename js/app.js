@@ -69,9 +69,10 @@ function addElement(){
         
         listLi.innerHTML+= "<li>";
         //listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>" + linkText; 
-        listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>linkText";
+        listLi.innerHTML+= "<a href='' id='menu__name' onclick='sectionScroll(section2)'>linkText";
         listLi.innerHTML+= "</a>";
         listLi.innerHTML+= "</li>";
+        
         
         // Make a variable with the specific element in the HTML - to populate the list with
         let menuElement = document.getElementById("navbar__list");
@@ -83,6 +84,20 @@ function addElement(){
     }  
     return false; 
 }
+
+function myFunction(event) { 
+    var x = event.target;
+    let menuId = document.getElementById("menu__name");
+    for (let i=0; i<menu__name.length; i++) {
+        x.style.backgroundColor = "red";
+    }
+    document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "red";
+  }
+
+//function myFunction(event) { 
+//var x = event.target;
+//x.style.backgroundColor = "red";
+//}
 
 // Add in an onclick attribute within each new <a> tag created in the addElement function above 
 function attachClickEvent(){
