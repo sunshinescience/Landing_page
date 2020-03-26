@@ -91,6 +91,21 @@ section {
     text-decoration: none;
 }
 
+li {
+    float: left; /* Lines the list items horizontally */
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: grey;
+}
 
 /* Thought to add in a menu__link to go with the two things below this */
 .menu__link {

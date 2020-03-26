@@ -68,7 +68,8 @@ function addElement(){
         let linkText = document.createTextNode("section" + j + " ");
         
         listLi.innerHTML+= "<li>";
-        listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>Edit";
+        //listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>" + linkText; 
+        listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>linkText";
         listLi.innerHTML+= "</a>";
         listLi.innerHTML+= "</li>";
         
