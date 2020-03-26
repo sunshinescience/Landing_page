@@ -56,34 +56,31 @@ than apply the <a> on the list items you'll be creating for that ul
 and appending the <li> using appendChild */
 document.body.onload = addElement;
 
-function addElement(){  
+function addElement(){    
     for (let i=0; i<sectionNumber.length; i++) {
         //create a new li element
-        let listLi = document.createElement('li');
-        // Make an ID within this Li element
-        let newId = listLi.setAttribute("id", sectionNumber);
-        //create a new a tag within this Li element
-        let a = document.createElement('a');
-        //create a variable to append an <a> tag to a list
-        let liA = listLi.appendChild(a);
+        let listLi = document.createElement("li");
+
         // Make the 'section' number
         // Add 1 to the section, to build the correct section number 'text' in the nav menu
         let j = i + 1
         // make the text for the nav menu section(s) 
         let linkText = document.createTextNode("section" + j + " ");
-        // append text to list
-        let newElement = liA.appendChild(linkText); 
-
-        // Add in an href within the <a> tag, that has the '#' concatinated to the section number 
-        a.setAttribute("href", ("#" + linkText));
-
+        
+        listLi.innerHTML+= "<li>";
+        listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>Edit";
+        listLi.innerHTML+= "</a>";
+        listLi.innerHTML+= "</li>";
+        
         // Make a variable with the specific element in the HTML - to populate the list with
         let menuElement = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
-        menuElement.appendChild(newElement);
+        menuElement.appendChild(listLi);
+        
         // add a class called menu__link to the element
-        menuElement.classList.add("menu__link");  
+        menuElement.classList.add("menu__link"); 
     }  
+    return false; 
 }
 
 // Add in an onclick attribute within each new <a> tag created in the addElement function above 
