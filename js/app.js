@@ -72,8 +72,7 @@ function addElement(){
         listLi.innerHTML+= "<a href='' id='menu__name' onclick='sectionScroll(section2)'>linkText";
         listLi.innerHTML+= "</a>";
         listLi.innerHTML+= "</li>";
-        
-        
+          
         // Make a variable with the specific element in the HTML - to populate the list with
         let menuElement = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
@@ -89,10 +88,13 @@ function myFunction(event) {
     var x = event.target;
     let menuId = document.getElementById("menu__name");
     for (let i=0; i<menu__name.length; i++) {
-        x.style.backgroundColor = "red";
+        //x.style.backgroundColor = "green";
+        menuId.style.backgroundColor = "green";
+        //document.getElementById("menu__name") = x.style.backgroundColor = "red";
     }
     document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "red";
   }
+
 
 //function myFunction(event) { 
 //var x = event.target;
