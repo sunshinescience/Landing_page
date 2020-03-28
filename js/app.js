@@ -57,25 +57,20 @@ document.body.onload = addElement;
 // Function to dynamically build navigation menu
 function addElement(){    
     for (let i=0; i<sectionNumber.length; i++) {
-        //create a new li element
+        // Create a new li element
         let listLi = document.createElement("li");
+        // Create a new <a> 
+        let a = document.createElement('a');
 
-        // Make the 'section' number
-        // Add 1 to the section, to build the correct section number 'text' in the nav menu
-        let j = i + 1
-        // make the text for the nav menu section(s) 
-        let linkText = document.createTextNode("section" + j + " ");
-        
-        listLi.innerHTML+= "<li>";
-        //listLi.innerHTML+= "<a href='' onclick='sectionScroll(linkText)'>" + linkText; 
-        listLi.innerHTML+= "<a href='' id='menu__name' onclick='sectionScroll(section2)'>linkText";
-        listLi.innerHTML+= "</a>";
-        listLi.innerHTML+= "</li>";
-          
+        let j = i + 1;
+        a.href =  '#section' + j; // Instead of calling setAttribute
+        a.innerHTML = "section" + j; // <a>INNER_TEXT</a>
+        let liA = listLi.appendChild(a);
+
         // Make a variable with the specific element in the HTML - to populate the list with
         let menuElement = document.getElementById("navbar__list");
         // add the newly created element and its content into the DOM   
-        menuElement.appendChild(listLi);
+        menuElement.appendChild(liA);
         
         // add a class called menu__link to the element
         menuElement.classList.add("menu__link"); 
