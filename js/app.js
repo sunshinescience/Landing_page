@@ -59,12 +59,15 @@ function addElement(){
     for (let i=0; i<sectionNumber.length; i++) {
         // Create a new li element
         let listLi = document.createElement("li");
+
         // Create a new <a> 
         let a = document.createElement('a');
+        // Needed to set the dynamic menu styles here
+        a.setAttribute("style", "float:left; display: block; color: white; text-align: center; padding: 16px; text-decoration: none; font-size: 20px;"); //Set <a> attributes
 
         let j = i + 1;
         a.href =  '#section' + j; // Instead of calling setAttribute
-        a.innerHTML = "section" + j; // <a>INNER_TEXT</a>
+        a.innerHTML = "section" + ' ' + j; // <a>INNER_TEXT</a>
         let liA = listLi.appendChild(a);
 
         // Make a variable with the specific element in the HTML - to populate the list with

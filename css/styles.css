@@ -110,6 +110,7 @@ li a:hover {
 /* Thought to add in a menu__link to go with the two things below this */
 .menu__link {
     font-weight: bold;
+    text-decoration: none;
 }
 
 .navbar__menu .menu__link {
