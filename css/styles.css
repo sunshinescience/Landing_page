@@ -91,10 +91,6 @@ section {
     text-decoration: none;
 }
 
-#demo{
-    color: black;
-}
-
 li {
     float: left; /* Lines the list items horizontally */
 }

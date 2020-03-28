@@ -48,14 +48,13 @@
  * 
 */
 
+
 //create array with the sections in it
 const sectionNumber = document.getElementsByClassName('landing__container');
-// Build menu 
-/* First make ul using createElement 
-than apply the <a> on the list items you'll be creating for that ul
-and appending the <li> using appendChild */
+
 document.body.onload = addElement;
 
+// Function to dynamically build navigation menu
 function addElement(){    
     for (let i=0; i<sectionNumber.length; i++) {
         //create a new li element
@@ -84,6 +83,8 @@ function addElement(){
     return false; 
 }
 
+
+// Working on trying to attach a click event on an item in the navigation menu
 function myFunction(event) { 
     var x = event.target;
     let menuId = document.getElementById("menu__name");
@@ -92,10 +93,16 @@ function myFunction(event) {
         menuId.style.backgroundColor = "green";
         //document.getElementById("menu__name") = x.style.backgroundColor = "red";
     }
-    document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "red";
+    document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "section";
   }
 
 
+
+
+
+
+
+  //TODO:
 //function myFunction(event) { 
 //var x = event.target;
 //x.style.backgroundColor = "red";
@@ -103,6 +110,7 @@ function myFunction(event) {
 
 // Add in an onclick attribute within each new <a> tag created in the addElement function above 
 function attachClickEvent(){
+    var x = event.target;
     // Get all of the elements with className 'menu__link'. It returns an array
     let sectionList = document.getElementsByClassName('menu__link');
     
@@ -117,12 +125,7 @@ function attachClickEvent(){
 
 // Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
 
-//menuElement.onclick = sectionScroll(linkText); 
-// document.getElementById("newId").addEventListener("click", sectionScroll(tagName, sectionNumber));
-        
-/* menuElement.addEventListener("click", sectionScroll(linkText)); */
-//create an onclick
-//liA.onclick = "sectionScroll('section1')";
+// document.getElementById("menu__name").addEventListener("click", sectionScroll(sectionNumber));
 
 // Scroll to section on link click
 function sectionScroll(sectionNumber) {
