@@ -65,8 +65,9 @@ function addElement(){
         // Needed to set the dynamic menu styles here
         a.setAttribute("style", "float:left; display: block; color: white; text-align: center; padding: 16px; text-decoration: none; font-size: 20px;"); //Set <a> attributes
 
+        // Name the section and add in an href
         let j = i + 1;
-        a.href =  '#section' + j; // Instead of calling setAttribute
+        a.href =  '#section' + j; // Instead of calling setAttribute, we use href - here we just input the # with the section number to scroll to as defined in the href
         a.innerHTML = "section" + ' ' + j; // <a>INNER_TEXT</a>
         let liA = listLi.appendChild(a);
 
@@ -75,12 +76,11 @@ function addElement(){
         // add the newly created element and its content into the DOM   
         menuElement.appendChild(liA);
         
-        // add a class called menu__link to the element
+        // add a class called menu__link to the element 
         menuElement.classList.add("menu__link"); 
     }  
     return false; 
 }
-
 
 // Working on trying to attach a click event on an item in the navigation menu
 function myFunction(event) { 
@@ -93,18 +93,6 @@ function myFunction(event) {
     }
     document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "section";
   }
-
-
-
-
-
-
-
-  //TODO:
-//function myFunction(event) { 
-//var x = event.target;
-//x.style.backgroundColor = "red";
-//}
 
 // Add in an onclick attribute within each new <a> tag created in the addElement function above 
 function attachClickEvent(){
@@ -144,3 +132,8 @@ Better yet, listen to a scroll event, so use: object.addEventListener("scroll", 
 And if a certain section is scrolled to, then highlight it!
 */
 
+  //TODO: highlight section
+function myFunction(event) { 
+    var x = event.target;
+    x.style.backgroundColor = "red";
+}
