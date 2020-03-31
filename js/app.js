@@ -133,7 +133,7 @@ And if a certain section is scrolled to, then highlight it!
 */
 
   //TODO: highlight section
-function myFunction(event) { 
-    var x = event.target;
-    x.style.backgroundColor = "red";
-}
+//function myFunction(event) { 
+//    var x = event.target;
+//    x.style.backgroundColor = "red";
+//}

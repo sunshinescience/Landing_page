@@ -92,8 +92,10 @@ section {
     text-decoration: none;
 }
 
-#navbar__list ul li a:hover {
+/* mouse over link */
+a:hover {
     background-color: grey;
+    transition: ease 0.3s all;
 }
 
 /* Thought to add in a menu__link to go with the two things below this */
@@ -107,12 +109,6 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
-}
-
-.navbar__menu .menu__link:hover {
-    background-color: grey;
-    /* color: #fff; */
-    transition: ease 0.3s all;
 }
 
 /* Header Styles */
