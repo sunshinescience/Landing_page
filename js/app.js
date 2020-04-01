@@ -92,24 +92,20 @@ function myClassPrintFunction() {
     document.getElementById("demo").innerHTML = x;
   }
 
-let header = document.getElementById("navbar__list");
-let btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    });
-  }
-  
-
-function myFunction(event) {
+function highlightMenu(event) {
     for (let i=1; i<=sectionNumber.length; i++) {
         document.getElementById('mya' + i).style.backgroundColor = "black";
-    }
+   }
     var x = event.target;
-    x.style.backgroundColor = "red";
+    for (let j=1; j<=sectionNumber.length; j++){
+        if (x === document.getElementById('mya' + j)){
+            x.style.backgroundColor = "green";
+        }
+    }
 }
+
+
+
 
 
 // Scroll to section on link click

@@ -105,18 +105,10 @@ a:hover {
 .btn {
     border: none;
     outline: none;
-    background-color: none;
+    background-color: #f1f1f1;
     cursor: pointer;
     font-size: 18px;
   }
-  
-  /* Style the active class, and buttons on mouse-over */
-.active {
-    background-color: royalblue;
-    color: white;
-  }
-
-
 
 /* Thought to add in a menu__link to go with the two things below this */
 .menu__link {
