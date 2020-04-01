@@ -69,6 +69,8 @@ function addElement(){
         let j = i + 1;
         a.href =  '#section' + j; // Instead of calling setAttribute, we use href - here we just input the # with the section number to scroll to as defined in the href
         a.innerHTML = "section" + ' ' + j; // <a>INNER_TEXT</a>
+        a.id = 'mya' + j
+        //a.style.backgroundColor = "red";
         let liA = listLi.appendChild(a);
 
         // Make a variable with the specific element in the HTML - to populate the list with
@@ -101,7 +103,10 @@ for (var i = 0; i < btns.length; i++) {
   }
   
 
-function myFunction(event) { 
+function myFunction(event) {
+    for (let i=1; i<=sectionNumber.length; i++) {
+        document.getElementById('mya' + i).style.backgroundColor = "black";
+    }
     var x = event.target;
     x.style.backgroundColor = "red";
 }

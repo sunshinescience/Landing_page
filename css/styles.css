@@ -105,7 +105,7 @@ a:hover {
 .btn {
     border: none;
     outline: none;
-    background-color: #f1f1f1;
+    background-color: none;
     cursor: pointer;
     font-size: 18px;
   }
