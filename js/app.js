@@ -78,40 +78,34 @@ function addElement(){
         
         // add a class called menu__link to the element 
         menuElement.classList.add("menu__link"); 
+
+        // add a class called btn to the element 
+        menuElement.classList.add("btn"); 
     }  
     return false; 
 }
 
-// Working on trying to attach a click event on an item in the navigation menu
-function myFunction(event) { 
-    var x = event.target;
-    let menuId = document.getElementById("menu__name");
-    for (let i=0; i<menu__name.length; i++) {
-        //x.style.backgroundColor = "green";
-        menuId.style.backgroundColor = "green";
-        //document.getElementById("menu__name") = x.style.backgroundColor = "red";
-    }
-    document.getElementById("menu__name").innerHTML = x.style.backgroundColor = "section";
+function myClassPrintFunction() {
+    var x = document.getElementById("navbar__list").classList;
+    document.getElementById("demo").innerHTML = x;
   }
 
-// Add in an onclick attribute within each new <a> tag created in the addElement function above 
-function attachClickEvent(){
-    var x = event.target;
-    // Get all of the elements with className 'menu__link'. It returns an array
-    let sectionList = document.getElementsByClassName('menu__link');
-    
-    // Get the length of the above array
-    let listLength = sectionList.length;
-    let i = 0;
+let header = document.getElementById("navbar__list");
+let btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
+  
 
-    for (i=0;i<listLength;i++){
-        sectionList[i].addEventListener("click", sectionScroll(sectionNumber));
-    }   
+function myFunction(event) { 
+    var x = event.target;
+    x.style.backgroundColor = "red";
 }
 
-// Find a way to access each individual section, outside of the for loop, and then use the function below to scroll
-
-// document.getElementById("menu__name").addEventListener("click", sectionScroll(sectionNumber));
 
 // Scroll to section on link click
 function sectionScroll(sectionNumber) {
@@ -120,20 +114,12 @@ function sectionScroll(sectionNumber) {
 }
 
 
+
 // Set sections as active
 /* Step 1: Get element's position in relation to top of the viewport 
-
-Or, instead, perhaps use:  
-Execute a JavaScript when a <div> element is being scrolled:
-<div onscroll="myFunction()"> 
-
-Better yet, listen to a scroll event, so use: object.addEventListener("scroll", myScript);
 
 And if a certain section is scrolled to, then highlight it!
 */
 
-  //TODO: highlight section
-//function myFunction(event) { 
-//    var x = event.target;
-//    x.style.backgroundColor = "red";
-//}
+//TODO: highlight section
+
