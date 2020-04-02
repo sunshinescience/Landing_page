@@ -60,7 +60,6 @@ section {
     min-height: 80vh; /* Height of sections */
 }
 
-
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
@@ -97,9 +96,6 @@ a:hover {
     background-color: grey;
     transition: ease 0.3s all;
 }
-
-
-
 
 /* Style the buttons */
 .btn {
@@ -225,7 +221,6 @@ section:nth-of-type(3n + 1) .landing__container::after {
     opacity: 0;
     transition: ease 0.5s all;
 }
-
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */

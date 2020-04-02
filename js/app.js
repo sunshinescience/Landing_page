@@ -87,11 +87,6 @@ function addElement(){
     return false; 
 }
 
-function myClassPrintFunction() {
-    var x = document.getElementById("navbar__list").classList;
-    document.getElementById("demo").innerHTML = x;
-  }
-
 function highlightMenu(event) {
     for (let i=1; i<=sectionNumber.length; i++) {
         document.getElementById('mya' + i).style.backgroundColor = "black";
@@ -99,14 +94,10 @@ function highlightMenu(event) {
     var x = event.target;
     for (let j=1; j<=sectionNumber.length; j++){
         if (x === document.getElementById('mya' + j)){
-            x.style.backgroundColor = "green";
+            x.style.backgroundColor = "grey";
         }
     }
 }
-
-
-
-
 
 // Scroll to section on link click
 function sectionScroll(sectionNumber) {
